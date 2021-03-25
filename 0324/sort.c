@@ -26,10 +26,14 @@ void BubleSort(int* arr, int size) {
 void SelectionSort(int* arr, int size) {
 	//선택정렬 구현
 	int i, j;
-	for (i = ;i <  ;i++ ) {
+	for (i = 0;i < size-1 ; i++ ) {
 		printf("%d pass : ", i + 1);
-		for (j = ; j < ; j++) {
-
+		for (j = i + 1 ; j < size ; j++) {
+			if (arr[i] > arr[j]) {
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
 		}
 		PrintArray(arr, size);
 	}
