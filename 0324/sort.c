@@ -38,6 +38,24 @@ void SelectionSort(int* arr, int size) {
 		PrintArray(arr, size);
 	}
 }
+void QuickSort(int* arr, int left, int right) {
+	int pl = left;
+	int pr = right;
+	int x = arr[(left + right) / 2];
+	do {
+		while (arr[pl] < x) pl++;
+		while (arr[pr] > x) pr--;
+		if (pl <= pr) {
+			int temp = arr[pl];
+			arr[pl] = arr[pr];
+			arr[pr] = temp;
+			pl++;
+			pr--;
+		}
+	} while (pl<=pr);
+	if (left < pr) QuickSort(arr, left, pr);
+	if(right>pl) QuickSort(arr, pl, right);
+}
 int main(void) {
 	int* arr;
 	int size = 0; //배열 개수
@@ -56,7 +74,9 @@ int main(void) {
 	printf("생성 결과 : ");
 	PrintArray(arr, size);
 	//BubleSort(arr, size);
-	SelectionSort(arr, size);
+	//SelectionSort(arr, size);
+	QuickSort(arr, 0, size - 1);
+	PrintArray(arr, size);
 	free(arr);
 	return 0;
 }
