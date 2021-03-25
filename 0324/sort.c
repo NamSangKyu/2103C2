@@ -9,6 +9,19 @@ void PrintArray(int* arr, int size) {
 }
 void BubleSort(int* arr, int size) {
 	//버블 정렬 구현
+	int i, j;
+
+	for (i = 0; i < size-1 ; i++) {
+		printf("%d pass : ", i + 1);
+		for (j = 0; j < size-1-i; j++) {
+			if (arr[j] > arr[j + 1]) {
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+		PrintArray(arr, size);
+	}
 }
 int main(void) {
 	int* arr;
@@ -24,9 +37,10 @@ int main(void) {
 	for (int i = 0; i < size; i++) {
 		arr[i] = rand() % 100;
 	}
-	BubleSort(arr, size);
-	printf("정렬 결과 : ");
+
+	printf("생성 결과 : ");
 	PrintArray(arr, size);
+	BubleSort(arr, size);
 	free(arr);
 	return 0;
 }
