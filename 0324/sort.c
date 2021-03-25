@@ -23,6 +23,17 @@ void BubleSort(int* arr, int size) {
 		PrintArray(arr, size);
 	}
 }
+void SelectionSort(int* arr, int size) {
+	//선택정렬 구현
+	int i, j;
+	for (i = ;i <  ;i++ ) {
+		printf("%d pass : ", i + 1);
+		for (j = ; j < ; j++) {
+
+		}
+		PrintArray(arr, size);
+	}
+}
 int main(void) {
 	int* arr;
 	int size = 0; //배열 개수
@@ -40,7 +51,8 @@ int main(void) {
 
 	printf("생성 결과 : ");
 	PrintArray(arr, size);
-	BubleSort(arr, size);
+	//BubleSort(arr, size);
+	SelectionSort(arr, size);
 	free(arr);
 	return 0;
 }
