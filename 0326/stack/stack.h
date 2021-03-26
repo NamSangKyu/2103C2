@@ -13,5 +13,5 @@ void Init(int size);
 //스택에 데이터를 추가하는 부분
 void Push(int value);
 //스택에 있는 데이터를 뽑는 부분
-int Pop(int value);
+int Pop();
 #endif
