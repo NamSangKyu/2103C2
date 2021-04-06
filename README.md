@@ -20,5 +20,13 @@
 </ul>
 <h3>03월 30일 진도 내용</h3>
 <ul>
-<li>리스트
+<li>리스트</li>
+</ul>
+<h3>04월 6일 진도 내용</h3>
+<ul>
+<li>클래스 작성</li>
+<li>접근제어자 - private, public</li>
+<li>생성자 - 생성자 오버로딩, Initializer</li>
+<li>set/get 함수</li>
+<li>클래스 배열/ 클래스 포인터 배열</li>
 </ul>
