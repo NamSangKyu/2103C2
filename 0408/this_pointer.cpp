@@ -9,6 +9,7 @@ private:
 	int num;
 public:
 	A(int num) {
+		//자기 자신 객체를 나타내는 포인터
 		this->num = num;
 	}
 	void PrintInfo() {
